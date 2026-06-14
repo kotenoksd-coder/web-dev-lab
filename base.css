@@ -1,0 +1,193 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header__burger {
+    display: none; 
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.header__burger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+}
+
+[class^="card_"] {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, filter;
+}
+
+@keyframes pulse-black { 
+    0% { box-shadow: 0 0 0 0 rgba(0,0,0, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0,0,0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0,0,0, 0); }
+}
+
+@keyframes float-img {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes blurIn {
+    from { filter: blur(10px); opacity: 0; }
+    to { filter: blur(0); opacity: 1; }
+}
+
+::selection {
+    background-color: #FFB3C7;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #999;
+    font-style: italic;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hero_1 {
+    animation: blurIn 1.5s ease-out;
+}
+
+.hero_1 h1::before {
+    content: '●';
+    color: #ffb3c7;
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.hero_1 h1::first-letter {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.description_1_column_1_hero_3::first-line {
+    color: #487B94;
+    font-weight: 500;
+}
+
+a, button, .deal-card, [class^="card_"] {
+    transition: all 0.3s ease;
+}
+
+@keyframes float-img {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes icon-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }  
+}
+[class*="card_"], .deal-card, .columns_1_hero_4, .carousel-slide,
+.benefit-backet, .benefit-card, .benefit-temple, .slide-image,
+.pictire_1_hero_3, .pictire_2_hero_3, .pictire_3_hero_3,
+.category__card, .column_1_hero_6, .column_2_hero_5 {
+    overflow: hidden !important;
+}
+
+img {
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+[class*="card_"]:hover img, .deal-card:hover img, .columns_1_hero_4:hover img,
+.carousel-slide:hover img, .benefit-backet:hover img, .benefit-card:hover img,
+.benefit-temple:hover img, .slide-image:hover img,
+.pictire_1_hero_3:hover img, .pictire_2_hero_3:hover img, .pictire_3_hero_3:hover img,
+.category__card:hover img, .column_1_hero_6:hover img, .column_2_hero_5:hover img {
+    transform: scale(1.06) !important;
+}
+.column_1_hero_6,
+.hug_hero_6 {
+    overflow: visible !important;
+}
+
+.column_2_hero_5,
+.hug_hero_5 {
+    overflow: visible !important;
+}
+
+.hero__container {
+    overflow: visible !important;
+}
+/* ==========================================
+   ГЛОБАЛЬНОЕ ПОЯВЛЕНИЕ КАРТОЧЕК 
+   ========================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-backet, .benefit-card, .benefit-temple,
+.columns_1_hero_3, .columns_2_hero_3, .columns_3_hero_3,
+.columns_1_hero_4,
+[class^="card_"],
+.category__card,
+.deal-card {
+  opacity: 0; 
+  animation: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* ==========================================
+   ЗАДЕРЖКИ  ПО СЕКЦИЯМ
+   ========================================== */
+
+.benefit-backet { animation-delay: 0.1s; }
+.benefit-card   { animation-delay: 0.25s; }
+.benefit-temple { animation-delay: 0.4s; }
+
+.columns_1_hero_3 { animation-delay: 0.15s; }
+.columns_2_hero_3 { animation-delay: 0.35s; }
+.columns_3_hero_3 { animation-delay: 0.55s; }
+
+.columns_1_hero_4 { animation-delay: 0.2s; }
+
+.card_1_hero_7 { animation-delay: 0.1s; }
+.card_2_hero_7 { animation-delay: 0.2s; }
+.card_3_hero_7 { animation-delay: 0.3s; }
+.card_4_hero_7 { animation-delay: 0.4s; }
+.card_5_hero_7 { animation-delay: 0.5s; }
+.card_6_hero_7 { animation-delay: 0.6s; }
+.card_7_hero_7 { animation-delay: 0.7s; }
+.card_8_hero_7 { animation-delay: 0.8s; }
+.card_9_hero_7 { animation-delay: 0.9s; }
+
+.category__card:nth-child(1)  { animation-delay: 0.05s; }
+.category__card:nth-child(2)  { animation-delay: 0.1s; }
+.category__card:nth-child(3)  { animation-delay: 0.15s; }
+.category__card:nth-child(4)  { animation-delay: 0.2s; }
+.category__card:nth-child(5)  { animation-delay: 0.25s; }
+.category__card:nth-child(6)  { animation-delay: 0.3s; }
+.category__card:nth-child(7)  { animation-delay: 0.35s; }
+.category__card:nth-child(8)  { animation-delay: 0.4s; }
+.category__card:nth-child(9)  { animation-delay: 0.45s; }
+.category__card:nth-child(10) { animation-delay: 0.5s; }
+.category__card:nth-child(11) { animation-delay: 0.55s; }
+.category__card:nth-child(12) { animation-delay: 0.6s; }
+.category__card:nth-child(13) { animation-delay: 0.65s; }
+.category__card:nth-child(14) { animation-delay: 0.7s; }
+
+.deal-card:nth-child(1) { animation-delay: 0.15s; }
+.deal-card:nth-child(2) { animation-delay: 0.3s; }
+.deal-card:nth-child(3) { animation-delay: 0.45s; }
